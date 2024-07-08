@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galaxy Streams: Your gateway to endless entertainment. Dive into a world of movies, shows, and more. Start your journey today!">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Galaxy Streams - Your Universe of Entertainment</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #f0f0f0;
+            background-color: #0a0a2a;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            background: linear-gradient(rgba(10,10,42,0.8), rgba(10,10,42,0.8)), url('https://i.postimg.cc/Dzd9p1vH/background.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        .content {
+            text-align: center;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .signup-btn {
+            background-color: #4a90e2;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.25rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+        }
+        .signup-btn:hover {
+            background-color: #357ae8;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        }
+        .no-card {
+            font-size: 1rem;
+            margin-top: 1rem;
+            opacity: 0.8;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 3rem;
+            width: 100%;
+        }
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 25%;
+            transition: all 0.3s ease;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+        }
+        .feature svg {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+            fill: none;
+            stroke: #4a90e2;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Galaxy Streams</h1>
+            <p>Explore infinite worlds. Experience stories untold. Begin your streaming journey today.</p>
+            <a href="#" class="signup-btn" onclick="redirectToSignup()">Launch Your Adventure</a>
+            <p class="no-card">No credit card required. Your galaxy of content awaits in just 60 seconds.</p>
+            <div class="features">
+                <div class="feature">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2 7.5V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7.5"></path>
+                        <path d="M12 16v-4"></path>
+                        <path d="M8 16v-1"></path>
+                        <path d="M16 16v-3"></path>
+                    </svg>
+                    <p>Crystal Clear Visuals</p>
+                </div>
+                <div class="feature">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <p>Multi-Device Cosmos</p>
+                </div>
+                <div class="feature">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <p>Offline Stellar Voyages</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToSignup() {
+            window.location.href = 'https://galaxystreams.site/signup';
+        }
+    </script>
+</body>
+</html>
