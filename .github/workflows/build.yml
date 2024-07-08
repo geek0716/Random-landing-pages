@@ -1,0 +1,26 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Generate redirect.js 🔧
+        run: |
+          echo "const landingPages = [" > redirect.js
+          for file in landing*.html; do
+            echo "  '$file'," >> redirect.js
+          done
+          echo "];" >> redirect.js
+          cat redirect.js.template >> redirect.js
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: .
