@@ -17,10 +17,18 @@ jobs:
             echo "  '$file'," >> redirect.js
           done
           echo "];" >> redirect.js
-          cat redirect.js.template >> redirect.js
+          echo "function redirectToRandomPage() {" >> redirect.js
+          echo "    if (landingPages.length > 0) {" >> redirect.js
+          echo "        const randomPage = landingPages[Math.floor(Math.random() * landingPages.length)];" >> redirect.js
+          echo "        window.location.href = randomPage;" >> redirect.js
+          echo "    }" >> redirect.js
+          echo "}" >> redirect.js
+          echo "window.onload = redirectToRandomPage;" >> redirect.js
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages
-          folder: .
+      - name: Commit and Push Changes 🚀
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'github-actions@github.com'
+          git add redirect.js
+          git commit -m "Update redirect.js" || echo "No changes to commit"
+          git push
